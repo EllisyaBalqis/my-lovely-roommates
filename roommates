@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Lovely Roommates</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      padding: 40px;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .blue { color: #3b82f6; }
+    .pink { color: #ec4899; }
+    .green { color: #10b981; }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #6366f1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4f46e5;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div class="page active" id="page1">
+    <h1>For My Lovely Roommates</h1>
+    <p class="blue">You are the blue in my calm.</p>
+    <p class="pink">You are the pink in my joy.</p>
+    <p class="green">You are the green in my peace.</p>
+    <button onclick="nextPage()">Next</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="page" id="page2">
+    <h2>Grateful Words</h2>
+    <p>
+      As our matriks journey ends, I just want to say thank you for being a part of my life. 
+      You made every day brighter and every moment meaningful. I’m grateful for all the laughter, 
+      late-night talks, and memories we created.
+    </p>
+    <div class="gallery">
+      <img src="images/img1.jpg" alt="Photo 1">
+      <img src="images/img2.jpg" alt="Photo 2">
+      <img src="images/img3.jpg" alt="Photo 3">
+      <img src="images/img4.jpg" alt="Photo 4">
+    </div>
+    <button onclick="nextPage()">Next</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="page" id="page3">
+    <h2>Sya 💫</h2>
+    <p>
+      Sya, thank you for always being calm, patient, and sweet. You brought peace into the room 
+      even during the stressful days. I really appreciate your silent strength and the way you 
+      supported all of us.
+    </p>
+    <button onclick="nextPage()">Next</button>
+  </div>
+
+  <!-- Page 4 -->
+  <div class="page" id="page4">
+    <h2>Marsya 🧸</h2>
+    <p>
+      Marsya, your energy is unmatched! You made me laugh so much and always knew how to lift our spirits. 
+      Thank you for your warmth, your chaos (in a good way!), and your loyalty.
+    </p>
+    <button onclick="nextPage()">Next</button>
+  </div>
+
+  <!-- Page 5 -->
+  <div class="page" id="page5">
+    <h2>Wengyee 🌷</h2>
+    <p>
+      Wengyee, you are so thoughtful and caring. Your soft voice and kind heart really made our room 
+      feel like home. I’ll forever be thankful for our chats and your presence. You're special.
+    </p>
+    <p style="margin-top: 30px;">💖 Terima kasih semua 💖</p>
+  </div>
+
+  <script>
+    let currentPage = 1;
+    function nextPage() {
+      document.getElementById(`page${currentPage}`).classList.remove('active');
+      currentPage++;
+      const next = document.getElementById(`page${currentPage}`);
+      if (next) next.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
 
